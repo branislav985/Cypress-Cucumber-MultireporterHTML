@@ -6,7 +6,7 @@ module.exports = defineConfig({
 		video: false,
 		defaultCommandTimeout: 5000,
 		pageLoadTimeout: 10000,
-		specPattern: './cypress/e2e/*feature',
+		specPattern: './cypress/e2e/features/*feature',
 		setupNodeEvents(on, config) {
 			on('file:preprocessor', cucumber())
 			// implement node event listeners here
