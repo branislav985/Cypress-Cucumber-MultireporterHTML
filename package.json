@@ -18,19 +18,18 @@
 	"cypress-cucumber-preprocessor": {
 		"nonGlobalStepDefinitions": false,
 		"stepDefinitions": "./cypress/e2e/steps",
-		"html": {
+		"cucumberJson": {
+			"generate": true,
+			"outputFolder": "./cypress/reports",
+			"filePrefix": "",
+			"fileSuffix": ".cucumber"
+		},
+		"messages": {
 			"enabled": true,
-			"output": "./reports/basicReport.html"
+			"output": "./jsonlogs/messages.ndjson"
 		}
 	},
-	"cucumberJson": {
-		"generate": true,
-		"outputFolder": "./cypress/cucumber-json",
-		"filePrefix": "",
-		"fileSuffix": ".cucumber"
-	},
-	"messages": {
-		"enabled": false,
-		"output": "jsonlogs/messages.ndjson"
+	"devDependencies": {
+		"multiple-cucumber-html-reporter": "^3.4.0"
 	}
 }
